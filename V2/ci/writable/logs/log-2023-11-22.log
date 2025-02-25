@@ -1,0 +1,185 @@
+CRITICAL - 2023-11-22 11:22:58 --> Use of undefined constant code - assumed 'code' (this will throw an Error in a future version of PHP)
+in APPPATH/Controllers/Scenario.php on line 23.
+ 1 APPPATH/Controllers/Scenario.php(23): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Scenario->jouer()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-22 11:22:58 --> Uncaught ErrorException: chmod() has been disabled for security reasons in /home/2023DIFAL3/e21803762/public_html/V1/ci/system/Log/Handlers/FileHandler.php:119
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/2023DIFAL3/e21803762/public_html/V1/ci/system/Log/Handlers/FileHandler.php(119): chmod()
+#2 /home/2023DIFAL3/e21803762/public_html/V1/ci/system/Log/Logger.php(294): CodeIgniter\Log\Handlers\FileHandler->handle()
+#3 /home/2023DIFAL3/e21803762/public_html/V1/ci/system/Common.php(810): CodeIgniter\Log\Logger->log()
+#4 /home/2023DIFAL3/e21803762/public_html/V1/ci/system/Debug/Exceptions.php(133): log_message()
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler()
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+Use of undefined constant code - assumed 'code' (this will throw an Error in a future version of PHP)
+#0 /home/2023DIFAL3/e21803762/public_html/V1/ci/app/Controllers/Scenario.php(23): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/2023DIFAL3/e21803762/public_html/V1/ci/system/CodeIgniter.php(942): App\Controllers\Scenario->jouer()
+#2 /home/2023DIFAL3/e21803762/public_html/V1/ci/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#3 /home/2023DIFAL3/e21803762/public_html/V1/ci/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/2023DIFAL3/e21803762/public_html/V1/ci/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#5 {main}
+in SYSTEMPATH/Log/Handlers/FileHandler.php on line 119.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-22 11:23:14 --> Use of undefined constant code - assumed 'code' (this will throw an Error in a future version of PHP)
+in APPPATH/Controllers/Scenario.php on line 23.
+ 1 APPPATH/Controllers/Scenario.php(23): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Scenario->jouer()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-22 11:23:30 --> Use of undefined constant code - assumed 'code' (this will throw an Error in a future version of PHP)
+in APPPATH/Controllers/Scenario.php on line 23.
+ 1 APPPATH/Controllers/Scenario.php(23): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Scenario->jouer()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-22 11:50:18 --> Undefined variable: difficulte
+in APPPATH/Views/jouer_scenario.php on line 15.
+ 1 APPPATH/Views/jouer_scenario.php(15): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2023DIFAL3/e21803762/public_html/V1/ci/app/Views/jouer_scenario.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Scenario.php(32): view()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Scenario->jouer()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-22 11:52:21 --> Undefined index: t_etape_eta.id_eta
+in APPPATH/Views/jouer_scenario.php on line 22.
+ 1 APPPATH/Views/jouer_scenario.php(22): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2023DIFAL3/e21803762/public_html/V1/ci/app/Views/jouer_scenario.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Scenario.php(32): view()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Scenario->jouer()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-22 11:53:22 --> Undefined index: intitule_sce
+in APPPATH/Views/jouer_scenario.php on line 27.
+ 1 APPPATH/Views/jouer_scenario.php(27): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2023DIFAL3/e21803762/public_html/V1/ci/app/Views/jouer_scenario.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Scenario.php(32): view()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Scenario->jouer()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-22 11:53:32 --> Undefined index: pseudo_cpt
+in APPPATH/Views/jouer_scenario.php on line 27.
+ 1 APPPATH/Views/jouer_scenario.php(27): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2023DIFAL3/e21803762/public_html/V1/ci/app/Views/jouer_scenario.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Scenario.php(32): view()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Scenario->jouer()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-22 11:53:40 --> Undefined index: code_sce
+in APPPATH/Views/jouer_scenario.php on line 27.
+ 1 APPPATH/Views/jouer_scenario.php(27): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2023DIFAL3/e21803762/public_html/V1/ci/app/Views/jouer_scenario.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Scenario.php(32): view()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Scenario->jouer()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-22 11:53:45 --> Undefined index: ressource_eta
+in APPPATH/Views/jouer_scenario.php on line 33.
+ 1 APPPATH/Views/jouer_scenario.php(33): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2023DIFAL3/e21803762/public_html/V1/ci/app/Views/jouer_scenario.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Scenario.php(32): view()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Scenario->jouer()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-22 11:53:51 --> Undefined index: difficulte_ind
+in APPPATH/Views/jouer_scenario.php on line 38.
+ 1 APPPATH/Views/jouer_scenario.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2023DIFAL3/e21803762/public_html/V1/ci/app/Views/jouer_scenario.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Scenario.php(32): view()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Scenario->jouer()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-22 11:53:58 --> Undefined index: question_eta
+in APPPATH/Views/jouer_scenario.php on line 39.
+ 1 APPPATH/Views/jouer_scenario.php(39): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2023DIFAL3/e21803762/public_html/V1/ci/app/Views/jouer_scenario.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Scenario.php(32): view()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Scenario->jouer()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-22 11:54:04 --> Undefined index: lien_ind
+in APPPATH/Views/jouer_scenario.php on line 42.
+ 1 APPPATH/Views/jouer_scenario.php(42): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2023DIFAL3/e21803762/public_html/V1/ci/app/Views/jouer_scenario.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Scenario.php(32): view()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Scenario->jouer()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-22 11:54:09 --> Undefined index: description_ind
+in APPPATH/Views/jouer_scenario.php on line 43.
+ 1 APPPATH/Views/jouer_scenario.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(228): include('/home/2023DIFAL3/e21803762/public_html/V1/ci/app/Views/jouer_scenario.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Scenario.php(32): view()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Scenario->jouer()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-22 13:00:58 --> chmod() has been disabled for security reasons
+in SYSTEMPATH/Session/Handlers/FileHandler.php on line 147.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Session/Handlers/FileHandler.php(147): chmod()
+ 3 [internal function]: CodeIgniter\Session\Handlers\FileHandler->read()
+ 4 SYSTEMPATH/Session/Session.php(919): session_start()
+ 5 SYSTEMPATH/Session/Session.php(241): CodeIgniter\Session\Session->startSession()
+ 6 SYSTEMPATH/Config/Services.php(693): CodeIgniter\Session\Session->start()
+ 7 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH/Config/BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH/Config/Services.php(664): CodeIgniter\Config\BaseService::getSharedInstance()
+10 SYSTEMPATH/Config/BaseService.php(258): CodeIgniter\Config\Services::session()
+11 SYSTEMPATH/Common.php(996): CodeIgniter\Config\BaseService::__callStatic()
+12 APPPATH/Views/compte/compte_creer.php(10): session()
+13 SYSTEMPATH/View/View.php(228): include('/home/2023DIFAL3/e21803762/public_html/V1/ci/app/Views/compte/compte_creer.php')
+14 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+15 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render()
+16 APPPATH/Controllers/Compte.php(52): view()
+17 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Compte->creer()
+18 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+19 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+20 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-22 13:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-22 13:16:01 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 884.
+ 1 SYSTEMPATH/Model.php(635): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/Compte.php(44): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Compte->creer()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-22 13:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
