@@ -1,0 +1,91 @@
+SELECT * from t_compte_cpt
+where pseudo_cpt in(select pseudo_cpt from t_actualite_act)
+
+
+SELECT * from t_compte_cpt
+where pseudo_cpt not in(select pseudo_cpt from t_actualite_act)
+
+SELECT * from t_compte_cpt
+left join t_actualite_act USING(pseudo_cpt)
+where id_act is NULL
+
+-------------------------------
+
+
+
+DELIMITER $$
+CREATE DEFINER=`e21803762sql`@`%` PROCEDURE `recap_participant`(IN `identifiant` INT)
+BEGIN
+SELECT GROUP_CONCAT(tp.adresse_par) as participant from t_reussite_reu tr
+JOIN t_participant_par tp on tr.id_par = tp.id_par
+where tr.id_sce = identifiant;
+END$$
+DELIMITER ;
+
+
+
+------------------------------
+
+DELIMITER $$
+CREATE DEFINER=`e21803762sql`@`%` PROCEDURE `msg_sce`(IN identifiant INT, OUT text VARCHAR(255))
+BEGIN
+    DECLARE intitule VARCHAR(255);
+    DECLARE nb_par INT;
+    DECLARE premier_participant VARCHAR(255);
+
+    SELECT intitule_sce INTO intitule FROM t_scenario_sce WHERE id_sce = identifiant;
+    SELECT nb_participant_sce(identifiant) INTO nb_par;
+    
+    SELECT CONCAT(id_par, ' le ', MIN(dateFirstR_reu)) 
+    INTO premier_participant 
+    FROM t_reussite_reu 
+    WHERE id_sce = identifiant  
+    GROUP BY id_par                        
+    ORDER BY MIN(dateFirstR_reu) 
+    LIMIT 1;
+
+    SET text = CONCAT(intitule, '--', nb_par, '--', premier_participant);
+END$$
+DELIMITER ;
+
+--------------
+
+CREATE TRIGGER `ajout_act` BEFORE UPDATE ON `t_scenario_sce`
+ FOR EACH ROW BEGIN
+    DECLARE text_msg VARCHAR(255);
+    DECLARE identifiant INT; 
+    DECLARE intitule VARCHAR(255);
+
+    IF OLD.etat_sce = 'A' AND NEW.etat_sce = 'C' THEN
+        CALL msg_sce(old.id_sce, text_msg);
+        if text_msg IS NULL THEN
+        	set intitule=(SELECT intitule_sce from t_scenario_sce where id_sce = old.id_sce);
+        	set text_msg = concat(intitule,' --pas de participant');
+        end if;
+        IF old.id_sce is not null and text_msg is not null then
+            SET identifiant = (old.id_sce);
+            INSERT INTO t_actualite_act(id_act, intitule_act, description_act, date_act, pseudo_cpt)
+            VALUES (NULL, CONCAT('Scenario ', identifiant, ' retiré'),text_msg, NOW(), 'administrATeur');
+        set new.intitule_sce = concat(old.intitule_sce,'-Caché le ',now());
+        end if;
+    ELSEIF new.etat_sce='A' and old.etat_sce='C' THEN
+    	DELETE from t_actualite_act where intitule_act like concat("Scenario ",old.id_sce," retiré");
+        set new.intitule_sce=(SELECT SUBSTRING_INDEX(intitule_sce,'-',1) as text from t_scenario_sce where id_sce = new.id_sce);
+    END IF;
+END
+
+
+-------------------
+
+CREATE TRIGGER `modif_actu_orga` BEFORE DELETE ON `t_compte_cpt`
+ FOR EACH ROW BEGIN
+DECLARE leRole char(1);
+set leRole = (SELECT role_pfl from t_profil_pfl where pseudo_cpt=old.pseudo_cpt);
+    if leRole = 'O' then
+        Delete from t_actualite_act 
+        where pseudo_cpt = old.pseudo_cpt;
+        UPDATE t_scenario_sce
+        set pseudo_cpt="organisATeur"
+        where pseudo_cpt=old.pseudo_cpt;
+    end if;
+END
